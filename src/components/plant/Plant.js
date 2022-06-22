@@ -7,7 +7,7 @@ import { useLocalStorage } from '../useLocalStorage/useLocalStorage'
 
 
 // function Plant(props) {
-  const Plant = (props) => {
+  const Plant = () => {
     let [water, setWater] = useLocalStorage('water', 0);
     let [soil, setSoil] = useLocalStorage('soil', 0);
     let [light, setLight] = useLocalStorage('light', 0);

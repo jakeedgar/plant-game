@@ -1,8 +1,6 @@
-import './styles'
 import { Directory } from '../../components/Directory/Directory'
 
-
-export default HomePage = () => {
+export const HomePage = () => {
   return(
     <div>
       <Directory />
