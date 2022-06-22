@@ -8,9 +8,9 @@ import { useLocalStorage } from '../useLocalStorage/useLocalStorage'
 
 // function Plant(props) {
   const Plant = (props) => {
-    let [water, setWater] = useLocalStorage(0, 0);
-    let [soil, setSoil] = useLocalStorage(0, 0);
-    let [light, setLight] = useLocalStorage(0, 0);
+    let [water, setWater] = useLocalStorage('water', 0);
+    let [soil, setSoil] = useLocalStorage('soil', 0);
+    let [light, setLight] = useLocalStorage('light', 0);
     let [names, setName] = useLocalStorage('name', '');
 
     const handleChange = (event) => {
