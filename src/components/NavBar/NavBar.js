@@ -6,7 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -18,6 +17,7 @@ import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
 import YardIcon from '@mui/icons-material/Yard';
 import { Link } from '@mui/material';
+import { useLocalStorage } from '../useLocalStorage/useLocalStorage'
 
 const drawerWidth = 240;
 
@@ -26,17 +26,21 @@ function NavBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [desktopOpen, setDesktopOpen] = React.useState(false);
 
+  let drawerValues = ['Home', 'Create Plant'];
+  
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
     setDesktopOpen(!desktopOpen);
   };
 
+
   const drawer = (
+    
     <div>
       <Toolbar />
       <Divider />
       <List>
-        {['Home', 'Create Plant'].map((text, index) => (
+        {drawerValues.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -135,5 +139,6 @@ NavBar.propTypes = {
    */
   window: PropTypes.func,
 };
+
 
 export default NavBar;

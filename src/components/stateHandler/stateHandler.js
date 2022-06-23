@@ -1,5 +1,3 @@
-
-
 export const stateHandler = (prop) => {
   return(value) => {
     return(state) => ({
